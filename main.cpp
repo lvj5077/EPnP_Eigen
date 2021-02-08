@@ -45,16 +45,16 @@ int main(int argc, char* argv[])
 
   Eigen::Matrix3d K;
 
-  K << 120.0, 0, 321.0,
-       0, 122.0, 238.0,
+  K << 1460.2, 0, 965.24,
+       0, 1460.2, 653.62,
        0,     0,     1;
 
   //randperm(100, 1000.0, Pw);
   //eigen_debug_tool.printForMatlab("Pw = ", Pw);
   //eigen_debug_tool.writeToCSVFile("reference_3d_points.csv", Pw);
 
-  eigen_debug_tool.readFromCSVFile("reference_3d_points.csv", Pw);
-  eigen_debug_tool.readFromCSVFile("reference_2d_points.csv", pc);
+  eigen_debug_tool.readFromCSVFile("fixUVd.csv", Pw);
+  eigen_debug_tool.readFromCSVFile("mvUVd.csv", pc);
   //eigen_debug_tool.printForMatlab("Pc = ", pc);
 
   EPnPEigen pnpEigenSolver(Pw, pc, K);

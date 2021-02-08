@@ -29,10 +29,11 @@ void EPnPEigenDebugTool::readFromCSVFile(const string& fileName, Eigen::MatrixXd
     cols = 0;
     while (getline(lineStream, cell, ',')){
       mat(rows, cols) = stod(cell);
+      // cout << rows <<" "<< cols<<" "<< cell << endl;
       cols++;
     }  	
     rows++;
-    cout << endl;
+    
   }	
 
   indata.close();

@@ -305,6 +305,8 @@ void EPnPEigen::estimateRt(Eigen::Matrix3d& R, Eigen::Vector3d& t){
   tool.printForMatlab("V = ", V);
   tool.printForMatlab("R = ", R);
   tool.printForMatlab("t = ", t);
+  // tool.printForMatlab("P0c = ", P0c);
+  // tool.printForMatlab("P0w = ", P0w);
 }
 
 
@@ -350,7 +352,8 @@ void EPnPEigen::computePose(){
   computeRt(eigvector, betas[1], R1, t1);
 
 
-  //EPnPEigenDebugTool tool;
-  //tool.printForMatlab("pcs = ", reference_3d_points_camera_coord_);
+  // EPnPEigenDebugTool tool;
+  // tool.printForMatlab("pcs = ", reference_3d_points_camera_coord_);
+  // tool.printForMatlab("pcs = ", reference_3d_points_);
   //tool.printForMatlab("point3d_col_sum = ", control_3d_points_);    
 }
